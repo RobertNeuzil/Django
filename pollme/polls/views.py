@@ -9,5 +9,5 @@ def polls_list(request):
 	context = {
 	"now": now
 	}
-	return render(request, "polls/pollslist.html", context)
+	return render(request, "polls/polls_list.html", context)
 # Create your views here.

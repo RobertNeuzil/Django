@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title> Pollme | Home </title>
-  </head>
-  <body>
-  <h1>
-  	Welcome to the Home Page
-  </h1>
-  <h2>
-  	The current time is {{ now }}
-  </h2>
+{% extends 'base.html'  %}
 
-  </body>
-</html>
+{% block content %}
+<h1> Welcome to home, this block content is specific to the home template </h1>
+{% endblock %}

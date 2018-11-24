@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Pollme | Home </title>
+  </head>
+  <body>
+
+  <h3> This text is coming from base.html and cannot be overwritten </h3>
+  {% block content %}
+  <h1> This text is coming from base.html and can be overwritten, as it is inside block content </h1>
+  {% endblock %}
+
+  </body>
+</html>
