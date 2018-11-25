@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from . models import Poll, Choice
 
@@ -23,8 +23,8 @@ def poll_detail(request, poll_id):
 
 
 
-	poll = Poll.objects.get(id=poll_id)
-
+	#poll = Poll.objects.get(id=poll_id)
+	poll = get_object_or_404(Poll, id=poll_id)
 	context = {
 	'poll': poll
 	}
