@@ -5,9 +5,21 @@
 
 <ul>
 {% for x in polls %}
+	
 	<li>
-		{{ x }}
+	{{ x }}
 	</li>
+		<ul>
+			
+			
+		{% for choice in x.choice_set.all %}
+			<li>
+				
+				{{ choice }}
+				
+			</li>
+		{% endfor %}
+		</ul>
 {% endfor %}
 </ul>
 {% endblock %}
