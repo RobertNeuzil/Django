@@ -17,4 +17,22 @@ def polls_list(request):
 	
 	}
 	return render(request, "polls/polls_list.html", context)
+
+def poll_detail(request, poll_id):
+	#return HttpResponse(f'<h1> you are looking for a poll with an id of {poll_id}</h1>')
+
+
+
+	poll = Poll.objects.get(id=poll_id)
+
+	context = {
+	'poll': poll
+	}
+
+
+
+	return render(request, 'polls/poll_detail.html', context )
+
+
+
 # Create your views here.
